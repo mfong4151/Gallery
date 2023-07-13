@@ -12,6 +12,9 @@ function Navbar() {
         <li className="navbar-item">
           <Link to="/orbit" className="navbar-link">Orbit</Link>
         </li>
+        <li className="navbar-item">
+          <Link to="/loading" className="navbar-link">Loading</Link>
+        </li>
       </ul>
     </nav>
   );

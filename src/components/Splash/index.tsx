@@ -1,11 +1,9 @@
-import React from 'react'
+import React, {useEffect} from 'react'
+import { restClient } from '@polygon.io/client-js';
+const Index = () => {
 
-const index = () => {
-  return (
-    <div>
-      
-    </div>
-  )
-}
 
-export default index
+  return <div></div>;
+};
+
+export default Index;

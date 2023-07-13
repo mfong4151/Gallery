@@ -1,0 +1,35 @@
+/* OrbitFrame.css */
+
+.orbit-container {
+    width: 80%;
+    height: 0;
+    padding-bottom: 80%;
+    position: relative;
+    border: 2px solid red;
+    cursor: pointer;
+  }
+  
+  .orbit {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #ccc;
+  }
+  
+  
+  #div1 {
+    transform: translate(-75%, -50%);
+  }
+  
+  #div2 {
+    transform: translate(-50%, -75%);
+  }
+  
+  #div3 {
+    transform: translate(-25%, -50%);
+  }
+  
