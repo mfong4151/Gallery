@@ -1,0 +1,119 @@
+@property --gradient-angle{
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+@keyframes rotation{
+    0% { --gradient-angle: 0deg;}
+    100%{ --gradient-angle:360deg;}
+}
+
+.frame{
+    height:60vh;
+    aspect-ratio: 1/1.5;
+    background: var(--color-gray-900);
+    border-radius: 0.5rem;
+    position: relative;
+}
+
+.frame::before{
+    filter: blur(3.5rem);
+}
+
+.frame::before,
+.frame::after{
+    content: '';
+    position:absolute;
+    inset: -.5rem;
+    z-index: 0;
+    border-radius: inherit;
+    animation: rotation 5s linear infinite;
+}
+
+.red::before,
+.red::after{
+    background: conic-gradient(
+        from var(--gradient-angle),
+        var( --color-red-200),
+        var(--color-red-500),
+        var(--color-red-900),
+        var(--color-red-500),
+        var(--color-red-200)
+        );
+}
+
+.green::before,
+.green::after{
+    background: conic-gradient(
+        from var(--gradient-angle),
+        var( --color-green-200),
+        var(--color-green-500),
+        var(--color-green-900),
+        var(--color-green-500),
+        var(--color-green-200)
+        );
+}
+.blue::before,
+.blue::after{
+    background: conic-gradient(
+        from var(--gradient-angle),
+        var( --color-blue-200),
+        var(--color-blue-500),
+        var(--color-blue-900),
+        var(--color-blue-500),
+        var(--color-blue-200)
+        );
+}
+.fuchia::before,
+.fuchia::after{
+    background: conic-gradient(
+        from var(--gradient-angle),
+        var( --color-fuchia-200),
+        var(--color-fuchia-500),
+        var(--color-fuchia-900),
+        var(--color-fuchia-500),
+        var(--color-fuchia-200)
+        );
+}
+.indigo::before,
+.indigo::after{
+    background: conic-gradient(
+        from var(--gradient-angle),
+        var( --color-indigo-200),
+        var(--color-indigo-500),
+        var(--color-indigo-900),
+        var(--color-indigo-500),
+        var(--color-indigo-200)
+        );
+}
+
+
+.inner{
+    height:99.9%;
+    aspect-ratio: 1/1.5;
+    z-index: 1;
+    color: rgba(0, 0, 0, 0);
+    background-color:var(--color-gray-950);
+
+}
+
+
+.gradient-btn {
+    cursor: pointer;
+    border:transparent;
+    font-size: 50px; /* Adjust the font size as needed */
+    background: linear-gradient(
+      to right,
+      var(--color-red-200),
+      var(--color-red-500),
+      var(--color-red-950),
+      var(--color-red-500),
+      var(--color-red-200)
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5); /* Add a shadow for text visibility */
+  }
